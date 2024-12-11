@@ -465,3 +465,225 @@ section.active {
   opacity: 1;
   transform: scale(1);
 }
+
+.resume-detail.about .resume-list {
+  height: auto;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+
+.resume-detail.about .resume-item {
+  height: auto;
+  padding: 0 0 0.5rem;
+  background: transparent;
+}
+
+.resume-detail.about .resume-item p {
+  color: var(--main-color);
+}
+
+.resume-detail.about .resume-item p span {
+  color: var(--white-color);
+  margin-left: 1rem;
+  font-size: 1.8rem;
+}
+
+/* Portfolio Section */
+
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.portfolio-detail {
+  display: none;
+}
+
+.portfolio-detail.active {
+  display: block;
+}
+
+.portfolio-box .numb {
+  font-size: 8rem;
+  -webkit-text-stroke: 0.07rem var(--white-color);
+  color: transparent;
+  line-height: 1;
+}
+
+.portfolio-box h3 {
+  font-size: 3.5rem;
+  margin: 0.8rem 0 2rem;
+}
+
+.portfolio-box p {
+  font-size: 1.6rem;
+}
+
+.portfolio-box .tech {
+  margin: 2rem 0;
+  color: var(--main-color);
+  border-bottom: 0.1rem solid var(--white-color);
+  padding-bottom: 2rem;
+}
+
+.portfolio-box .live-github a {
+  position: relative;
+  display: inline-flex;
+  padding: 1.3rem;
+  font-size: 3rem;
+  color: var(--white-color);
+  border-radius: 50%;
+  background: var(--secondary-color);
+  transition: 0.5s;
+}
+
+.portfolio-box .live-github a:hover {
+  color: var(--main-color);
+}
+
+.portfolio-box .live-github a:first-child {
+  margin-right: 1.5rem;
+}
+
+.portfolio-box .live-github a:first-child i {
+  transform: rotate(135deg);
+}
+
+.portfolio-box .live-github a span {
+  position: absolute;
+  top: -60%;
+  left: 50%;
+  transform: translateX(-50%) scale(0.9); /* Center the text */
+  font-size: 1.6rem;
+  white-space: nowrap; /* Prevent text wrapping */
+  padding: 0.5rem 1rem;
+  border-radius: 0.6rem;
+  pointer-events: none; /* Prevent hover effect */
+  background: var(--main-color);
+  color: var(--bg-color);
+  opacity: 0;
+  scale: 0.9;
+  transition: 0.2s;
+}
+
+.portfolio-box .live-github a:hover span {
+  top: -70%;
+  opacity: 1;
+  transform: translateX(-50%) scale(1); /* Center the text */
+}
+
+.portfolio-box .portfolio-carousel {
+  width: 100%;
+  height: 45rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.portfolio-carousel .image-slide {
+  display: flex; /* Use flex to align images horizontally */
+  grid-auto-flow: column; /* Arrange images in a row */
+  grid-auto-columns: 100%; /* Ensure each image occupies the full width */
+  gap: 2rem; /* Add space between images */
+  height: inherit;
+  transition: transform 0.5s ease; /* Smooth animation for sliding */
+}
+
+.portfolio-carousel .image-item {
+  flex-shrink: 0; /* Prevent images from shrinking */
+  width: 100%; /* Ensure each image occupies the full width
+  height: inherit; /* Keep the height consistent */
+}
+
+.portfolio-carousel .image-item img {
+  display: block;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  object-fit: cover; /* Ensure images maintain their aspect ratio */
+  border-radius: 1rem; /* Add rounded corners */
+}
+
+.portfolio-box .navigation {
+  text-align: right;
+  margin-top: 2rem;
+}
+
+.portfolio-box .navigation button {
+  display: inline-flex;
+  padding: 0.4rem;
+  background: var(--secondary-color);
+  border: 0.2rem solid var(--main-color);
+  border-radius: 0.6rem;
+  font-size: 4rem;
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.portfolio-box .navigation button.disabled {
+  border-color: var(--secondary-color);
+  color: var(--disabled-color);
+}
+
+.portfolio-box .navigaation .arrow-right {
+  margin-left: 1.5rem;
+}
+
+/* Contact Section */
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 3rem;
+}
+
+.contact-container .contact-box:first-child {
+  align-self: center;
+}
+
+.contact-box h2 {
+  font-size: 4.5rem;
+}
+
+.contact-box p {
+  font-size: 1.6rem;
+}
+
+.contact-box .desc {
+  margin: 1.5rem 0 2.5rem;
+}
+
+.contact-box .contact-detail {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.contact-detail i {
+  display: inline-flex;
+  background: var(--secondary-color);
+  color: var(--main-color);
+  font-size: 3rem;
+  padding: 1.2rem;
+  border-radius: 0.6rem;
+  margin-right: 1.5rem;
+}
+
+.contact-detail .detail p:first-child {
+  color: var(--main-color);
+}
+
+.contact-box form {
+  background: var(--secondary-color);
+  padding: 2.5rem 3.5rem 3.5rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.contact-box .heading {
+  font-size: 3.5rem;
+}
+
+.contact-box .field-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
